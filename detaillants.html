@@ -2,40 +2,65 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Achat en ligne</title>
-  <link rel="stylesheet" href="./css/bumalAchat.css">
-  <link href="./css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/aos.css" />
-  <link rel="stylesheet" href="./css/Achat.css">
-  <link rel="stylesheet" href="./css/showcase.css">
-  <script src="./js/showcase.js"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achat en ligne</title>
+    <link rel="stylesheet" href="./css/bumalAchat.css">
+    <link href="./css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/aos.css" />
+    <link rel="stylesheet" href="./css/Achat.css">
+    <link rel="stylesheet" href="./css/showcase.css">
+    <script src="./js/showcase.js"></script>
+    <script>	  
+        document.addEventListener('DOMContentLoaded', function () {
+        
+          // Get all "navbar-burger" elements
+          var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+        
+          // Check if there are any navbar burgers
+          if ($navbarBurgers.length > 0) {
+        
+            // Add a click event on each of them
+            $navbarBurgers.forEach(function ($el) {
+              $el.addEventListener('click', function () {
+        
+                // Get the target from the "data-target" attribute
+                var target = $el.dataset.target;
+                var $target = document.getElementById(target);
+        
+                // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+                $el.classList.toggle('is-active');
+                $target.classList.toggle('is-active');
+        
+              });
+            });
+          }
+        
+        });
+     </script>
 </head>
 
 <body>
   <!-- NavBar va a todo lo ancho -->
+  <!-- -->
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" href="">
-        <img src="" width="112" height="28">
-      </a>
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
+        <a href=""><img src="" width="112" height="28"></a>
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarExampleTransparentExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
     </div>
 
-    <div class="navbar-menu">
+    <div class="navbar-menu"  id="navbarExampleTransparentExample">
 
       <div class="navbar-start" >
         <a class="navbar-item" href="index.html">
          Accueil
         </a>
 
-        <a class="navbar-item" href="#detaillants">
+        <a class="navbar-item" href="detaillants.html">
           Détaillants
         </a>
 
@@ -43,15 +68,13 @@
           Boutique en ligne
         </a>
 
-        <a class="navbar-item" href="contact.html">
+        <a class="navbar-item" href="#contact">
           Contact
         </a>
 
       </div>
     </div>
   </nav>
-
-  
 
 
  <!-- Begin Footer -->
